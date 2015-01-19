@@ -56,8 +56,10 @@ up =  \relative c' {
   e, b' g' e, fs d' a' fs,
 
   gs b e d a c e fs
-  b, d fs gs a,, c' a' ds,
-  e g! b cs d,, fs' d' gs,
+  \override TextSpanner.bound-details.left.text = #"IV "
+  b, d fs gs a,, <c'-3\3>\startTextSpan <a'-2\1> <ds,-1\2>\stopTextSpan
+  \override TextSpanner.bound-details.left.text = #"VII"
+  e\startTextSpan g! b cs\stopTextSpan d,, fs' d' gs,
 
   a,, a'' cs ds, e g! b cs
   cs, e a cs, d fs a b
